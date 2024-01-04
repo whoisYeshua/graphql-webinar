@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {
+		/* Modules */
+		"module": "nodenext"
+	}
+}

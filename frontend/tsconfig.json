@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"paths": {
+			"$*": ["./src/*"]
+		}
+	},
+	"extends": [
+		"@graphql-webinar/tsconfig/tsconfig.base.json",
+		"@graphql-webinar/tsconfig/tsconfig.frontend.json"
+	],
+	"include": ["./src"],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}

@@ -1,0 +1,36 @@
+{
+	"name": "@graphql-webinar/graphql-server",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"description": "GraphQL-сервер для проекта",
+	"scripts": {
+		"watch": "concurrently \"tsc -w\" \"npm run start\"",
+		"start": "node --watch-path=./dist ./dist/server.js",
+		"build": "tsc",
+		"codegen": "graphql-codegen --config ../../graphql.config.json --project graphql-server",
+		"codegen:check": "npm run codegen -- --check",
+		"codegen:watch": "npm run codegen -- --watch ./src/**/*.gql",
+		"format": "npm run format:prettier",
+		"format:prettier": "npm run lint:prettier -- --write",
+		"lint": "npm run lint:prettier && npm run lint:ts",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
+		"lint:ts": "tsc --noEmit",
+		"clean": "rimraf .turbo dist node_modules src/types.generated.ts",
+		"postinstall": "npm run codegen"
+	},
+	"dependencies": {
+		"@graphql-tools/load-files": "7.0.0",
+		"@graphql-tools/schema": "10.0.2",
+		"@graphql-webinar/db": "*",
+		"graphql": "16.8.1",
+		"graphql-yoga": "5.1.1"
+	},
+	"devDependencies": {
+		"@graphql-codegen/cli": "5.0.0",
+		"@graphql-codegen/typescript": "4.0.1",
+		"@graphql-codegen/typescript-resolvers": "4.0.1",
+		"@graphql-webinar/tsconfig": "*",
+		"concurrently": "8.2.2"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"name": "@graphql-webinar/rest-server",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"description": "REST-сервер для проекта",
+	"scripts": {
+		"watch": "concurrently \"tsc -w\" \"npm run start\"",
+		"start": "node --watch-path=./dist ./dist/server.js",
+		"build": "tsc",
+		"format": "npm run format:prettier",
+		"format:prettier": "npm run lint:prettier -- --write",
+		"lint": "npm run lint:prettier && npm run lint:ts",
+		"lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check --ignore-path ../../.prettierignore",
+		"lint:ts": "tsc --noEmit",
+		"clean": "rimraf .turbo dist node_modules"
+	},
+	"dependencies": {
+		"@graphql-webinar/db": "*",
+		"fastify": "4.25.2",
+		"pino-pretty": "10.3.1"
+	},
+	"devDependencies": {
+		"concurrently": "8.2.2",
+		"@graphql-webinar/tsconfig": "*"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		/* Language and Environment */
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"jsx": "react-jsx",
+
+		/* Modules */
+		"module": "esnext",
+		"moduleResolution": "bundler",
+
+		/* Emit */
+		"noEmit": true
+	}
+}

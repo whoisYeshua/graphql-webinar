@@ -1,0 +1,59 @@
+{
+	"$schema": "https://raw.githubusercontent.com/kamilkisiela/graphql-config/master/config-schema.json",
+	"projects": {
+		"graphql-server": {
+			"schema": "./backend/graphql-server/src/Schema.gql",
+			"extensions": {
+				"codegen": {
+					"overwrite": true,
+					"generates": {
+						"./backend/graphql-server/src/types.generated.ts": {
+							"plugins": ["typescript", "typescript-resolvers"],
+							"config": {
+								"enumsAsTypes": true,
+								"useTypeImports": true,
+								"contextType": "./context.js#GraphQlContext",
+								"mappers": {
+									"Continent": "@graphql-webinar/db#ContinentDbData",
+									"Country": "@graphql-webinar/db#CountryDbData",
+									"Language": "@graphql-webinar/db#LanguageDbData"
+								}
+							}
+						}
+					}
+				}
+			}
+		},
+		"frontend": {
+			"schema": "./backend/graphql-server/src/Schema.gql",
+			"documents": "./frontend/src/api/**/*.gql",
+			"extensions": {
+				"codegen": {
+					"overwrite": true,
+					"generates": {
+						"./frontend/src/api/gql/api.generated.ts": {
+							"plugins": ["typescript", "typescript-operations", "typed-document-node"],
+							"config": {
+								"enumsAsTypes": true,
+								"useTypeImports": true
+							}
+						},
+						"./frontend/src/api/gql/apolloHelpers.generated.ts": {
+							"plugins": [
+								"typescript-apollo-client-helpers",
+								{
+									"add": {
+										"content": "/* eslint-disable */"
+									}
+								}
+							],
+							"config": {
+								"useTypeImports": true
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

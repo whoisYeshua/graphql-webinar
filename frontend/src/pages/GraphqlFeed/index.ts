@@ -1,0 +1,1 @@
+export { GraphqlFeed } from './GraphqlFeed'

@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"outDir": "dist",
+		"declaration": true
+	},
+	"extends": [
+		"@graphql-webinar/tsconfig/tsconfig.base.json",
+		"@graphql-webinar/tsconfig/tsconfig.node.json"
+	]
+}

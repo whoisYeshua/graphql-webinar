@@ -1,0 +1,20 @@
+query Feed($countryLimit: Int) {
+	continents {
+		code
+		name
+		countries(filter: { limit: $countryLimit }) {
+			code
+			name
+			native
+			emoji
+			phone
+			currency
+			languages {
+				code
+				name
+				rtl
+				native
+			}
+		}
+	}
+}

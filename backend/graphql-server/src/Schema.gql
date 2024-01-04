@@ -1,0 +1,45 @@
+type Query {
+	continents: [Continent!]!
+	continent(code: String!): Continent
+	countries(filter: FilterCountryInput): [Country!]!
+	country(code: String!): Country
+	languages: [Language!]!
+	language(code: String!): Language
+}
+
+type Continent {
+	code: String!
+	name: String!
+	countries(filter: FilterCountryInput): [Country!]!
+}
+
+input FilterCountryInput {
+	limit: Int
+	offset: Int
+}
+
+type Country {
+	code: String!
+	name: String!
+	native: String
+	phone: [String!]
+	continent: Continent!
+	currency: [String!]
+	languages: [Language!]
+	emoji: String
+	subdivisions: [Subdivision!]
+}
+
+type Language {
+	code: String!
+	name: String!
+	native: String!
+	rtl: Boolean!
+	countries: [Country!]!
+}
+
+type Subdivision {
+	code: String!
+	type: String!
+	name: String!
+}
