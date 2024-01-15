@@ -11,7 +11,7 @@
 1. Склонируйте (нужен _git_) или скачайте репозиторий:
 
 ```bash
-git clone https://github.com/
+git clone https://github.com/whoisYeshua/graphql-webinar
 ```
 
 2. Перейдите в папку
