@@ -6,7 +6,7 @@
 	"description": "GraphQL-сервер для проекта",
 	"scripts": {
 		"watch": "concurrently \"tsc -w\" \"npm run start\"",
-		"start": "node --watch-path=./dist ./dist/server.js",
+		"start": "cross-env NODE_ENV='development' node --watch-path=./dist ./dist/server.js",
 		"build": "tsc",
 		"codegen": "graphql-codegen --config ../../graphql.config.json --project graphql-server",
 		"codegen:check": "npm run codegen -- --check",
@@ -21,16 +21,20 @@
 	},
 	"dependencies": {
 		"@graphql-tools/load-files": "7.0.0",
+		"@graphql-tools/merge": "9.0.1",
 		"@graphql-tools/schema": "10.0.2",
 		"@graphql-webinar/db": "*",
 		"graphql": "16.8.1",
-		"graphql-yoga": "5.1.1"
+		"graphql-yoga": "5.1.1",
+		"vercel": "33.2.0"
 	},
 	"devDependencies": {
 		"@graphql-codegen/cli": "5.0.0",
 		"@graphql-codegen/typescript": "4.0.1",
 		"@graphql-codegen/typescript-resolvers": "4.0.1",
 		"@graphql-webinar/tsconfig": "*",
-		"concurrently": "8.2.2"
+		"@vercel/node": "3.0.17",
+		"concurrently": "8.2.2",
+		"cross-env": "7.0.3"
 	}
 }

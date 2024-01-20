@@ -1,0 +1,16 @@
+{
+	"cleanUrls": true,
+	"trailingSlash": false,
+	"outputDirectory": "dist",
+	"functions": {
+		"api/graphql.js": {
+			"includeFiles": "**/*.gql"
+		}
+	},
+	"rewrites": [
+		{
+			"source": "/graphql",
+			"destination": "/api/graphql"
+		}
+	]
+}
