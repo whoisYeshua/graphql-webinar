@@ -30,16 +30,21 @@ type Country {
 	subdivisions: [Subdivision!]
 }
 
+"""
+Сущность языка
+Присутствуют почти все языки для стран
+"""
 type Language {
+	"Уникальный код языка"
 	code: String!
 	name: String!
 	native: String!
 	rtl: Boolean!
-	countries: [Country!]!
+	countries: [Country!]! # TODO: добавить фильтр - FilterCountryInput
 }
 
 type Subdivision {
 	code: String!
-	type: String!
+	type: String! @deprecated(reason: "Перестали поддерживать")
 	name: String!
 }

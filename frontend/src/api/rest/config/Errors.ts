@@ -1,7 +1,6 @@
-interface FetchErrorConstructor {
+interface FetchErrorConstructor extends ErrorOptions {
 	status: number
 	statusText: string
-	cause?: unknown
 }
 
 export class FetchError extends Error {
