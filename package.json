@@ -15,6 +15,13 @@
 		"start": "turbo start",
 		"start:gql": "turbo start --filter ./frontend --filter ./backend/graphql-server",
 		"start:rest": "turbo start --filter ./frontend --filter ./backend/rest-server",
+		"format": "turbo run format",
+		"format:eslint": "turbo run format:eslint",
+		"format:prettier": "turbo run format:prettier",
+		"lint": "turbo run lint --parallel",
+		"lint:eslint": "turbo run lint:eslint",
+		"lint:prettier": "turbo run lint:prettier",
+		"lint:ts": "turbo run lint:ts --parallel",
 		"clean": "npm run clean -ws --if-present && rimraf .turbo dist node_modules"
 	},
 	"packageManager": "npm@9.8.1",
