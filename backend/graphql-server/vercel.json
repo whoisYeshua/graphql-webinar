@@ -8,6 +8,13 @@
 			"includeFiles": "**/*.gql"
 		}
 	},
+	"redirects": [
+    {
+      "source": "/((?!graphql).*)",
+      "destination": "/graphql",
+      "permanent": true
+    }
+  ],
 	"rewrites": [
 		{
 			"source": "/graphql",
