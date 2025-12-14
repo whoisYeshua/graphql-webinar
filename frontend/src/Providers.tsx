@@ -1,6 +1,6 @@
 import { Provider as ReduxProvider } from 'react-redux'
 import { RouterProvider } from 'react-router-dom'
-import { ApolloProvider } from '@apollo/client'
+import { ApolloProvider } from '@apollo/client/react'
 import { createTheme, MantineProvider } from '@mantine/core'
 
 import { apolloClient } from '$api/gql'

@@ -1,5 +1,5 @@
 import { Skeleton, Stack } from '@mantine/core'
-import { useQuery } from '@apollo/client'
+import { useQuery } from '@apollo/client/react'
 
 import { FeedDocument } from '$api/gql'
 import { Continent } from './components'

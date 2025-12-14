@@ -9,10 +9,13 @@ export const countryRoutes: FastifyPluginCallback = async (server) => {
 		const codes = getQueryCodes(request.query.code)
 		const data = dataSources.getCountries()
 		if (codes) {
-			return codes.reduce((acc, code) => {
-				acc[code] = data[code]
-				return acc
-			}, {} as Record<string, CountryDbData>)
+			return codes.reduce(
+				(acc, code) => {
+					acc[code] = data[code]
+					return acc
+				},
+				{} as Record<string, CountryDbData>,
+			)
 		}
 		return data
 	})

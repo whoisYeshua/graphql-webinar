@@ -20,11 +20,11 @@
 		"clean": "rimraf .turbo dist node_modules"
 	},
 	"dependencies": {
-		"countries-list": "3.0.6",
+		"countries-list": "3.2.2",
 		"iso-3166-2": "1.0.0"
 	},
 	"devDependencies": {
-		"@types/iso-3166-2": "1.0.3",
+		"@types/iso-3166-2": "1.0.4",
 		"@graphql-webinar/tsconfig": "*"
 	}
 }

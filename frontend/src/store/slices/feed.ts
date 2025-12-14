@@ -11,7 +11,7 @@ export const fetchFeed = createAsyncThunk(
 
 		const countryCodes = Object.entries(continentsDataMap)
 			.map(([, continent]) =>
-				countryLimit ? continent.countries.slice(0, countryLimit) : continent.countries
+				countryLimit ? continent.countries.slice(0, countryLimit) : continent.countries,
 			)
 			.flat()
 
@@ -32,7 +32,7 @@ export const fetchFeed = createAsyncThunk(
 			countries: countriesDataMap,
 			languages: languagesDataMap,
 		}
-	}
+	},
 )
 
 interface ContinentsState {
@@ -77,21 +77,21 @@ const languagesSelector = (state: RootState) => rootSelector(state).data?.langua
 export const selectIsLoadingFeed = createSelector([rootSelector], (state) => state.loading)
 
 export const selectContinentCodes = createSelector([continentsSelector], (state) =>
-	state ? Object.keys(state) : null
+	state ? Object.keys(state) : null,
 )
 export const selectContinentByCode = createSelector(
 	[continentsSelector, (_state, code: string) => code],
-	(state, code) => state?.[code]
+	(state, code) => state?.[code],
 )
 
 export const selectCountryByCode = createSelector(
 	[countriesSelector, (_state, code: string) => code],
-	(state, code) => state?.[code]
+	(state, code) => state?.[code],
 )
 
 export const selectLanguageByCode = createSelector(
 	[languagesSelector, (_state, code: string) => code],
-	(state, code) => state?.[code]
+	(state, code) => state?.[code],
 )
 
 export default continentsSlice.reducer

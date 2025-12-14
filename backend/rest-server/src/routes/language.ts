@@ -9,10 +9,13 @@ export const languageRoutes: FastifyPluginCallback = async (server) => {
 		const codes = getQueryCodes(request.query.code)
 		const data = dataSources.getLanguages()
 		if (codes) {
-			return codes.reduce((acc, code) => {
-				acc[code] = data[code]
-				return acc
-			}, {} as Record<string, LanguageDbData>)
+			return codes.reduce(
+				(acc, code) => {
+					acc[code] = data[code]
+					return acc
+				},
+				{} as Record<string, LanguageDbData>,
+			)
 		}
 		return data
 	})

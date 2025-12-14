@@ -4,9 +4,9 @@ import { AppShellNavbar, NavLink } from '@mantine/core'
 
 import { routes } from '$router'
 
-import type { TablerIconsProps } from '@tabler/icons-react'
+import type { IconProps } from '@tabler/icons-react'
 
-const iconProps: TablerIconsProps = {
+const iconProps: IconProps = {
 	size: '1rem',
 	stroke: 1.5,
 }

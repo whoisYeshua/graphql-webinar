@@ -2,7 +2,6 @@
 	"name": "graphql-webinar",
 	"version": "1.0.0",
 	"description": "Исходники для вебинара по graphql",
-	"main": "index.js",
 	"private": true,
 	"workspaces": [
 		"frontend",
@@ -24,15 +23,16 @@
 		"lint:ts": "turbo run lint:ts --parallel",
 		"clean": "npm run clean -ws --if-present && rimraf .turbo dist node_modules"
 	},
-	"packageManager": "npm@9.8.1",
+	"packageManager": "npm@11.6.2",
 	"engines": {
-		"node": ">=18",
-		"npm": ">=9"
+		"node": ">=22",
+		"npm": ">=10"
 	},
 	"devDependencies": {
-		"@types/node": "18.19.4",
-		"rimraf": "5.0.5",
-		"turbo": "1.11.3",
-		"typescript": "5.3.3"
+		"@types/node": "24.10.3",
+		"prettier": "3.7.4",
+		"rimraf": "6.1.2",
+		"turbo": "2.6.3",
+		"typescript": "5.9.3"
 	}
 }

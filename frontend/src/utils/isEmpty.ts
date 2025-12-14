@@ -1,5 +1,5 @@
 export function isEmpty(
-	value: unknown
+	value: unknown,
 ): value is null | undefined | '' | [] | Record<string, never> {
 	if (value === null || value === undefined) {
 		return true

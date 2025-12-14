@@ -30,7 +30,7 @@ export const countriesData = Object.entries(countriesRaw).reduce(
 		}
 		return acc
 	},
-	{} as Record<string, CountryDbData>
+	{} as Record<string, CountryDbData>,
 )
 
 export interface ContinentDbData {
@@ -45,7 +45,7 @@ export const continentsData = Object.entries(continentsRaw).reduce(
 			.filter(
 				([, country]) =>
 					country.continent === continentKey ||
-					country.continents?.includes(continentKey as TContinentCode)
+					country.continents?.includes(continentKey as TContinentCode),
 			)
 			.map(([code]) => code)
 		acc[continentKey] = {
@@ -55,7 +55,7 @@ export const continentsData = Object.entries(continentsRaw).reduce(
 		}
 		return acc
 	},
-	{} as Record<string, ContinentDbData>
+	{} as Record<string, ContinentDbData>,
 )
 
 export interface LanguageDbData {
@@ -79,5 +79,5 @@ export const languagesData = Object.entries(languagesRaw).reduce(
 		}
 		return acc
 	},
-	{} as Record<string, LanguageDbData>
+	{} as Record<string, LanguageDbData>,
 )

@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-undef -- cjs file
-module.exports = {
+const config = {
 	plugins: {
 		'postcss-preset-mantine': {},
 		'postcss-simple-vars': {
@@ -13,3 +12,5 @@ module.exports = {
 		},
 	},
 }
+
+export default config

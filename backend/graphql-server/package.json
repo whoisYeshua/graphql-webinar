@@ -20,21 +20,21 @@
 		"postinstall": "npm run codegen"
 	},
 	"dependencies": {
-		"@graphql-tools/load-files": "7.0.0",
-		"@graphql-tools/merge": "9.0.1",
-		"@graphql-tools/schema": "10.0.2",
+		"@graphql-tools/load-files": "7.0.1",
+		"@graphql-tools/merge": "9.1.6",
+		"@graphql-tools/schema": "10.0.30",
 		"@graphql-webinar/db": "*",
-		"graphql": "16.8.1",
-		"graphql-yoga": "5.1.1",
-		"vercel": "33.2.0"
+		"graphql": "16.12.0",
+		"graphql-yoga": "5.17.1",
+		"vercel": "50.0.1"
 	},
 	"devDependencies": {
-		"@graphql-codegen/cli": "5.0.0",
-		"@graphql-codegen/typescript": "4.0.1",
-		"@graphql-codegen/typescript-resolvers": "4.0.1",
+		"@graphql-codegen/cli": "6.1.0",
+		"@graphql-codegen/typescript": "5.0.6",
+		"@graphql-codegen/typescript-resolvers": "5.1.4",
 		"@graphql-webinar/tsconfig": "*",
-		"@vercel/node": "3.0.17",
-		"concurrently": "8.2.2",
-		"cross-env": "7.0.3"
+		"@vercel/node": "5.5.15",
+		"concurrently": "9.2.1",
+		"cross-env": "10.1.0"
 	}
 }
