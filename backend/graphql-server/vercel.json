@@ -4,7 +4,7 @@
 	"trailingSlash": false,
 	"outputDirectory": "dist",
 	"functions": {
-		"api/graphql.js": {
+		"api/graphql.ts": {
 			"includeFiles": "**/*.gql"
 		}
 	},
